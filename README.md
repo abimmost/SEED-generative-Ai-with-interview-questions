@@ -13,11 +13,17 @@ This repository contains **10 step-by-step assignments** for building **Generati
 * **Diffusion Models for Image Generation**
 
 Each assignment you’ll get:
+
 ✅ Step-by-step guide
+
 ✅ Model info (size)
+
 ✅ Knowledge base / resources
+
 ✅ Lesson you’ll learn
+
 ✅ **7 Interview Questions**
+
 ✅ **Motivational Quote**
 
 ---
