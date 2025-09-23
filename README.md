@@ -214,6 +214,4 @@ Each assignment you'll:
 ---
 "Learning never exhausts the mind." — Leonardo da Vinci
 
----
 
-Would you like me to now **draft actual FastAPI `main.py` skeletons** (imports, routes, TODO placeholders) for each exercise, so your students can just fill in the AI logic?
