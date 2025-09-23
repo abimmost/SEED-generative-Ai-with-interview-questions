@@ -1,27 +1,24 @@
 
-#  Generative AI Excercises – Intelligent Endpoints with FastAPI
+
+#  Generative AI Exercises – Intelligent Endpoints with FastAPI + LangChain
 
 <img width="858" height="484" alt="image" src="https://github.com/user-attachments/assets/476792ba-69e5-40e7-8fa9-f91923b894b6" />
-
 
 This repository contains **10 step-by-step assignments** for building **Generative AI applications** with:
 
 * **Python + FastAPI**
 * **LLMs from Hugging Face**
 * **Multimodal Models** (Google GenAI / Hugging Face)
-* **Naive RAG (Chroma / FAISS)**
+* **Naive RAG (Chroma / FAISS) + LangChain**
 * **Diffusion Models for Image Generation**
 
-Each assignment you'll:
+Each assignment you’ll get:
 ✅ Step-by-step guide
-
 ✅ Model info (size)
-
 ✅ Knowledge base / resources
-
 ✅ Lesson you’ll learn
-
 ✅ **7 Interview Questions**
+✅ **Motivational Quote**
 
 ---
 
@@ -46,13 +43,15 @@ Each assignment you'll:
 6. Why expose models through an API instead of CLI?
 7. What’s the risk of directly exposing LLMs without moderation?
 
+💡 *"The secret of getting ahead is getting started."* — **Mark Twain**
+
 ---
 
 ### **2. Text Summarizer API**
 
 * **Goal**: `/summarize` → Summarize long text.
 * **Model**: `facebook/bart-large-cnn` (\~400M params).
-* **Lesson**: Learn sequence-to-sequence summarization.
+* **Lesson**: Learn sequence-to-sequence summarization with Hugging Face pipelines.
 * **Resource**: [BART Paper](https://arxiv.org/abs/1910.13461)
 
 **Interview Questions:**
@@ -65,13 +64,15 @@ Each assignment you'll:
 6. What evaluation metrics exist (ROUGE, BLEU)?
 7. How would you fine-tune BART on legal documents?
 
+💡 *"An investment in knowledge pays the best interest."* — **Benjamin Franklin**
+
 ---
 
 ### **3. Sentiment Analysis API**
 
 * **Goal**: `/sentiment` → Detect positive/negative sentiment.
 * **Model**: `distilbert-base-uncased-finetuned-sst-2-english` (\~66M params).
-* **Lesson**: Learn classification with transformers.
+* **Lesson**: Learn text classification with transformers.
 * **Resource**: [SST-2 Dataset](https://huggingface.co/datasets/sst2)
 
 **Interview Questions:**
@@ -83,6 +84,8 @@ Each assignment you'll:
 5. How do you evaluate classification performance?
 6. What biases can exist in sentiment models?
 7. How would you handle sarcasm in sentiment detection?
+
+💡 *"Learning never exhausts the mind."* — **Leonardo da Vinci**
 
 ---
 
@@ -103,14 +106,16 @@ Each assignment you'll:
 6. How do you evaluate captions (BLEU, CIDEr)?
 7. What real-world apps use captioning?
 
+💡 *"The best way to predict the future is to invent it."* — **Alan Kay**
+
 ---
 
-### **5. Naive RAG with Chroma**
+### **5. Naive RAG with Chroma + LangChain**
 
 * **Goal**: `/rag-query` → Query docs with retrieval.
 * **Model**: `all-MiniLM-L6-v2` (\~33M params).
-* **Lesson**: Learn embeddings + retrieval-augmented generation.
-* **Resource**: [Chroma Docs](https://docs.trychroma.com/)
+* **Lesson**: Learn embeddings + retrieval-augmented generation with **Chroma + LangChain retriever**.
+* **Resource**: [Chroma Docs](https://docs.trychroma.com/) | [LangChain RAG](https://python.langchain.com/docs/use_cases/question_answering/)
 
 **Interview Questions:**
 
@@ -122,14 +127,16 @@ Each assignment you'll:
 6. What is the risk of injecting irrelevant documents?
 7. How does RAG differ from fine-tuning?
 
+💡 *"It always seems impossible until it’s done."* — **Nelson Mandela**
+
 ---
 
-### **6. Naive RAG with FAISS**
+### **6. Naive RAG with FAISS + LangChain**
 
 * **Goal**: `/rag-faiss-query` → Same as above but with FAISS.
 * **Model**: `all-MiniLM-L6-v2`.
-* **Lesson**: Learn scalable vector search with FAISS.
-* **Resource**: [FAISS Docs](https://faiss.ai/)
+* **Lesson**: Learn scalable vector search with **FAISS + LangChain retriever**.
+* **Resource**: [FAISS Docs](https://faiss.ai/) | [LangChain VectorStores](https://python.langchain.com/docs/integrations/vectorstores/faiss)
 
 **Interview Questions:**
 
@@ -141,13 +148,15 @@ Each assignment you'll:
 6. How do you evaluate retrieval accuracy?
 7. How would you deploy FAISS in production?
 
+💡 *"Your time is limited, so don’t waste it living someone else’s life."* — **Steve Jobs**
+
 ---
 
 ### **7. Multimodal Q\&A (Image + Text)**
 
 * **Goal**: `/qa-image-text` → Ask a question about an image.
 * **Models**: `blip2-flan-t5-xl` (\~3B params) or Google Gemini Vision.
-* **Lesson**: Learn multimodal reasoning.
+* **Lesson**: Learn multimodal reasoning with LangChain multimodal support.
 * **Resource**: [BLIP-2 Paper](https://arxiv.org/abs/2301.12597)
 
 **Interview Questions:**
@@ -160,13 +169,15 @@ Each assignment you'll:
 6. How do you evaluate multimodal models?
 7. What industries need multimodal AI?
 
+💡 *"Tell me and I forget. Teach me and I remember. Involve me and I learn."* — **Benjamin Franklin**
+
 ---
 
-### **8. Chain Multiple Tools**
+### **8. Chain Multiple Tools with LangChain**
 
 * **Goal**: `/researcher` → Wikipedia fetch + summarization + sentiment.
-* **Lesson**: Learn chaining AI tasks.
-* **Resource**: [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page)
+* **Lesson**: Learn chaining AI tasks with LangChain `SequentialChain`.
+* **Resource**: [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) | [LangChain Chains](https://python.langchain.com/docs/modules/chains/)
 
 **Interview Questions:**
 
@@ -178,12 +189,14 @@ Each assignment you'll:
 6. What is LangChain and why is it popular?
 7. How would you monitor toolchain latency?
 
+💡 *"Creativity is intelligence having fun."* — **Albert Einstein**
+
 ---
 
-### **9. Intelligent Chat Endpoint**
+### **9. Intelligent Chat Endpoint with LangChain Routing**
 
 * **Goal**: `/chat` → Smart routing for queries (LLM, RAG, image).
-* **Lesson**: Learn adaptive decision-making in AI apps.
+* **Lesson**: Learn adaptive decision-making in AI apps with **LangChain RouterChain**.
 * **Resource**: [LLM Routing (LangChain)](https://docs.langchain.com/)
 
 **Interview Questions:**
@@ -196,13 +209,15 @@ Each assignment you'll:
 6. What metrics help evaluate a chat system?
 7. How would you scale this system for enterprise use?
 
+💡 *"The best way to learn is by doing. The only way to build a strong future is to start building today."* — **Unknown**
+
 ---
 
 ### **10. Diffusion Model – Image Generation**
 
 * **Goal**: `/generate-image` → Generate images from text prompts.
 * **Model**: `stable-diffusion-v1-5` (\~860M params).
-* **Lesson**: Learn how diffusion models synthesize images.
+* **Lesson**: Learn how diffusion models synthesize images (with Hugging Face Diffusers).
 * **Resource**: [Stable Diffusion](https://huggingface.co/runwayml/stable-diffusion-v1-5)
 
 **Interview Questions:**
@@ -215,7 +230,6 @@ Each assignment you'll:
 6. How do you optimize diffusion for faster inference?
 7. What industries benefit from diffusion models?
 
----
-"Learning never exhausts the mind." — Leonardo da Vinci
+💡 *"The best way to predict the future is to create it."* — **Peter Drucker**
 
 
