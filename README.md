@@ -14,9 +14,13 @@ This repository contains **10 step-by-step assignments** for building **Generati
 
 Each assignment you'll:
 ✅ Step-by-step guide
+
 ✅ Model info (size)
+
 ✅ Knowledge base / resources
+
 ✅ Lesson you’ll learn
+
 ✅ **7 Interview Questions**
 
 ---
