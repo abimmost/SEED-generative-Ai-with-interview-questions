@@ -7,7 +7,7 @@ EXERCISE 1(COMPLETED):
 Challenges:
 
 - Trying to use model: While trying to use the distilgpt2 HF model, at first, I put the model name where the task(e.g. sentiment-analysis) was supposed to go. I received a runtime error from pipeline showing a list of tasks that can be used and model names were not among. 
-What I did next was I hovered over the pipeline function and got a brief overview of the documentation(docsting) where I saw how to use the model, which is thanks to PyLance, and also other parameters that pipeline() can take.
-- text-generation vs text2text-generation: These are the two tasks I decided to use for this exercise but one of them proved to be useless. I realized when I used text2text-generation that it wasnt compatible with the distilgpt2 HF model because of it's a decoder only model and text2text-generation requires encoder-decoder models. text-generation is a decoder task so it was perfect for distilgpt2
-I used the text2text-generation to get proper answers or responses for the text.
+What I did next was I hovered over the pipeline function and got a brief overview of the documentation where I saw how to use the model, which is thanks to PyLance, and also other parameters that pipeline() can take.
+- text-generation vs text2text-generation: These are the two tasks I decided to use for this exercise but one of them proved to be useless. I realized when I used text-generation that it just spit out the same text I gave it but text2text-generation returned a response with given text.
+I used the text2text-generation to get proper answers or responses for the text
 - Changing uvicorn port: Using "--port 0" option hosts on a port not in use. Specifying the port to be used is also an option.
