@@ -11,3 +11,10 @@ Challenges:
 - "text-generation" vs "text2text-generation": These are the two tasks I decided to use for this exercise but one of them proved to be useless. I realized when I used "text2text-generation" that it wasnt compatible with the distilgpt2 HF model because of it's a decoder only model and "text2text-generation" requires encoder-decoder models. 
   "text-generation" is a decoder task so it was perfect for distilgpt2.
 - Changing uvicorn port: Using "--port 0" option hosts on a port not in use. Specifying the port to be used is also an option.
+
+
+EXERCISE 2(COMPLETED):
+
+Challenges:
+
+- Using sequence-to-sequence summarization: It was easy finding the task name for this which is just "summarization" but not as easy to use it. I later found out it took arguments like max_length and min_length(maximum and minimum length of the summary respectively) and others which were passed to an instance of the pipeline.
