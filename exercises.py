@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from transformers import pipeline
 from typing import Optional
 from pydantic import BaseModel
@@ -45,10 +45,22 @@ class Sentiment(BaseModel):
 
 @app.post("/sentiment")
 def senti(request:Sentiment):
-    sentiment_pipeline = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+    sentiment_pipeline = pipeline("text-classification", model="distilbert-base-uncased-finetuned-sst-2-english")
     senti = sentiment_pipeline(request.text)
 
     return {
         "text": request.text,
         "sentiment": senti
+    }
+
+## MULTIMODAL IMAGE CAPTIONING
+
+@app.post("/caption-image")
+def caption_image(file:UploadFile=File(...)):
+    caption_pipeline = pipeline("image-to-text", model="nlpconnect/vit-gpt2-image-captioning")
+    captioned_image = caption_pipeline(file)
+    
+    return {
+        "file": file.filename,
+        "caption": captioned_image
     }
