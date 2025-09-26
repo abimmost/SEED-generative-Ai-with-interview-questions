@@ -37,3 +37,18 @@ def summary(request:summary):
         "Long Text": request.long_text,
         "Summary": summarized
     }
+
+## SENTIMENT ANALYSIS
+
+class Sentiment(BaseModel):
+    text: str
+
+@app.post("/sentiment")
+def senti(request:Sentiment):
+    sentiment_pipeline = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
+    senti = sentiment_pipeline(request.text)
+
+    return {
+        "text": request.text,
+        "sentiment": senti
+    }
