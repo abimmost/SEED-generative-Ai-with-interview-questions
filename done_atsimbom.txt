@@ -24,10 +24,12 @@ Challenges:
 EXERCISE 3 - Sentiment Analysis API:
 
 Challenges:
-* No challenges here as it was implemented at a workstation.
+
+- I thought the same task name "sentiment-analysis" used at the workstation will be the same used here but I found out that the task "text-classification" is used here along with the model "distilbert-base-uncased-finetuned-sst-2-english"
 
 
 EXERCISE 4 - Multimodal Image Captioning:
 
 Challenges:
-- 
+- I used the UploadFile and File objects from FastAPI library so the user could upload their photo
+- I didn't know how the "image-to-text" task worked so I had help from huggingface which showed me that the photo can be passed to an instance of the pipeline without needing to convert to ascii.
