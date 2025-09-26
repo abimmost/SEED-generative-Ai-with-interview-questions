@@ -2,6 +2,8 @@
             MOKENYU ATSIMBOM GWE
 ---------------------------------------------------
 
+MAJOR CHALLENGE: Downloading these HF models into my local machine consumed a lot of mobile data so for a cost-effective choice, I decided to complete each exercise using google colab, There, I served FastAPI apps using ngrok which creates a temporary link that hosts the app. HF models were also easily downloaded with little mobile data used.
+
 EXERCISE 1 - Hello LLM Endpoint:
 
 Challenges:
