@@ -2,7 +2,7 @@
             MOKENYU ATSIMBOM GWE
 ---------------------------------------------------
 
-EXERCISE 1(COMPLETED):
+EXERCISE 1 - Hello LLM Endpoint:
 
 Challenges:
 
@@ -13,9 +13,21 @@ Challenges:
 - Changing uvicorn port: Using "--port 0" option hosts on a port not in use. Specifying the port to be used is also an option.
 
 
-EXERCISE 2(COMPLETED):
+EXERCISE 2 - Text Summarizer API:
 
 Challenges:
 
 - Using sequence-to-sequence summarization: It was easy finding the task name for this which is just "summarization" but not as easy to use it. I later found out it took arguments like max_length and min_length(maximum and minimum length of the summary respectively) and others which were passed to an instance of the pipeline.
 - Entering data in JSON on swagger: When I tried pasting my long text the first time, it had enter characters and other symbols which python returned as an error because they didn't fit the JSON format. So I changed every enter into \n and got rid of troublesome symbols.
+
+
+EXERCISE 3 - Sentiment Analysis API:
+
+Challenges:
+* No challenges here as it was implemented at a workstation.
+
+
+EXERCISE 4 - Multimodal Image Captioning:
+
+Challenges:
+- 
