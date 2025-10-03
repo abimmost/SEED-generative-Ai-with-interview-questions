@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, APIRouter
 from pydantic import BaseModel
 from transformers import pipeline
 
@@ -6,11 +6,15 @@ app = FastAPI(
     title="HF Exercises API",
     description="Multiple API endpoints built with FastAPI and Hugging Face Transformers",
     version="1.0.0",
-    contact={
-        "name": "abimmost",
-        "email": "atsimbomgwe31@outlook.com"
-    }
+    # contact={
+    #     "name": "abimmost",
+    #     "email": "atsimbomgwe31@outlook.com"
+    # }
 )
+
+app = APIRouter(tags=["Home"])
+
+router = APIRouter(prefix="/api", tags=["Hugging Face"])
 
 @app.get("/")
 def read_root():
@@ -20,7 +24,7 @@ def read_root():
 class HelloRequest(BaseModel):
     text: str
 
-@app.post("/hello-llm")
+@router.post("/hello-llm")
 def hello(request: HelloRequest):
     hello_pipeline = pipeline("text-generation", model="distilgpt2")
     greeting = hello_pipeline(request.text)
