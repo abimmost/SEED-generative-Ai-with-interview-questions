@@ -23,8 +23,8 @@ class HelloRequest(BaseModel):
 @app.post("/hello-llm")
 def hello(request: HelloRequest):
     hello_pipeline = pipeline("text-generation", model="distilgpt2")
-    greeting = hello_pipeline(request)
+    greeting = hello_pipeline(request.text)
     return {
-        "text": request,
+        "text": request.text,
         "Greetings": greeting
     }
