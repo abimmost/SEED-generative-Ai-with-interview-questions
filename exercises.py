@@ -12,7 +12,7 @@ app = FastAPI(
     }
 )
 
-app.get("/")
+@app.get("/")
 def read_root():
     return {"message": "Welcome to the HF Exercises API. Visit '/docs' for API documentation."}
 
@@ -24,6 +24,7 @@ class HelloRequest(BaseModel):
 def hello(request: HelloRequest):
     hello_pipeline = pipeline("text-generation", model="distilgpt2")
     greeting = hello_pipeline(request.text)
+    print(greeting)
     return {
         "text": request.text,
         "Greetings": greeting
