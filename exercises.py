@@ -24,7 +24,7 @@ def read_root():
 class HelloRequest(BaseModel):
     text: str
 
-@router.post("/hello-llm")
+@router.get("/hello-llm")
 def hello(request: HelloRequest):
     hello_pipeline = pipeline("text-generation", model="distilgpt2")
     greeting = hello_pipeline(request.text)
