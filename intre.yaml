@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: SEED GenAI Interview Questions
+    env: python
+    plan: free
+    repo: https://github.com/abimmost/SEED-generative-Ai-with-interview-questions.git
+    branch: full-contribute
+    region: frankfurt
+
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "uvicorn exercises:app --host 0.0.0.0 --port $PORT"
