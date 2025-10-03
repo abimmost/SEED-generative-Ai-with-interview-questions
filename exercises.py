@@ -12,8 +12,6 @@ app = FastAPI(
     # }
 )
 
-app = APIRouter(tags=["Home"])
-
 router = APIRouter(prefix="/api", tags=["Hugging Face"])
 
 @app.get("/")
